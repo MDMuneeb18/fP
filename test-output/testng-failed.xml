@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test1(failed)">
+  <listeners>
+    <listener class-name="test.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" name="LoanTests(failed)">
     <classes>
-      <class name="test.HomeLoanTest">
+      <class name="test.CarLoanTest">
         <methods>
           <include name="carLoanDataPassing" invocation-numbers="0"/>
-          <include name="homeLoanData1"/>
-          <include name="homeLoanTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
           <include name="carLoanTest"/>
-          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- test.CarLoanTest -->
+      <class name="test.HomeLoanTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="homeLoanData1"/>
+          <include name="homeLoanTest"/>
         </methods>
       </class> <!-- test.HomeLoanTest -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- LoanTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

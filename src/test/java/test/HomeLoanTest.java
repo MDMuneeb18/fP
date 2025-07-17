@@ -32,7 +32,7 @@ public class HomeLoanTest extends BaseTest{
 //		driver.get(BaseClass.getKeyValue("url"));
 //	}
 	
-	@Test(priority = 1, dataProvider="homeLoanData", dependsOnMethods= {"test.CarLoanTest.carLoanTest"})
+	@Test(priority = 1, dataProvider="homeLoanData", dependsOnMethods= {"test.CarLoanTest.carLoanDataPassing"})
 	public void homeLoanTest(String homeValue, String downPayment, String percentOrRupee, String loanInsurance, String loanAmount, String interestRate, String loanTenure, String loanFee, String loanStart, String oneTimeExpenses, String propertyTaxes, String homeInsurance, String maintenanceExpenses) throws AWTException  {
 		homeLoanObject = new HomeLoanTab(driver);
 		

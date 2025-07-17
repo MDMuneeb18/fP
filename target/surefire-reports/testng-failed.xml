@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="LoanTests(failed)" verbose="0">
+    <classes>
+      <class name="test.HomeLoanTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="homeLoanData1"/>
+          <include name="homeLoanTest"/>
+        </methods>
+      </class> <!-- test.HomeLoanTest -->
+      <class name="test.CarLoanTest">
+        <methods>
+          <include name="carLoanDataPassing"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="carLoanTest"/>
+        </methods>
+      </class> <!-- test.CarLoanTest -->
+    </classes>
+  </test> <!-- LoanTests(failed) -->
+</suite> <!-- Failed suite [Suite] -->

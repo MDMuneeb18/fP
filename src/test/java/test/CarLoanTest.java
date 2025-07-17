@@ -54,11 +54,7 @@ public class CarLoanTest extends BaseTest {
 		Assert.assertEquals(carLoanAmount, carLoanObject.getLoanAmountEntered().replace(",",""));
 		Assert.assertEquals(interestRate, carLoanObject.getInterestRateEntered().replaceAll(",", ""));
 		Assert.assertEquals(loanTenure, carLoanObject.getLoanTenureEntered().replaceAll(",", ""));
-	}
-	
-	@Test(priority = 2, dependsOnMethods = {"carLoanDataPassing"})
-	public void carLoanTest() {
-		carLoanObject = new CarLoanTab(driver);
+	 
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
 		carLoanObject.clickFirstYearInstallment();
 		//driver.findElement(By.xpath("//*[@class='col-2 col-lg-1 paymentyear toggle']")).click();
