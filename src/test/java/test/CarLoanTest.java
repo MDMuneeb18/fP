@@ -40,7 +40,7 @@ public class CarLoanTest extends BaseTest {
 //		driver.get(BaseClass.getKeyValue("url"));
 //	}
 	
-	@Test(priority = 1, dataProvider = "carLoanData")
+	@Test(priority = 1, dataProvider = "carLoanData", retryAnalyzer = RetryAnalyzer.class )
 	public void carLoanDataPassing(String carLoanAmount, String interestRate, String loanTenure, String yearOrMonth) throws AWTException, InterruptedException {
 		carLoanObject = new CarLoanTab(driver);	
 		carLoanObject.clickCarLoanTab();
